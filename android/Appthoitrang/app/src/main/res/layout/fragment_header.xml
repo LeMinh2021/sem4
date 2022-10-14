@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel1"
+            type="com.example.appthoitrang.ui.user.fragment.home.viewmodel.HeaderViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/line_group1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/h4CAF50"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10ssp"
+            android:paddingTop="@{Float.valueOf(viewModel1.heightStatusBar)+  @dimen/_10sdp}">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableStart="@drawable/ic_user"
+                    android:text="@{viewModel1.userInfo.first}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="@{viewModel1.userInfo.second}"
+                    android:textColor="@color/white"
+                    android:onClick="@{()->viewModel1.onClickSignOut()}"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:text="@={viewModel1.edittextSearch}"
+                android:id="@+id/edtSearch"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="@string/search"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_cart"
+                android:gravity="center_vertical"
+                android:text="@{String.valueOf(viewModel1.listCart.size())+ ' ' + @string/cart}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_225sdp"
+            android:id="@+id/banner"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:name="com.example.appthoitrang.ui.user.fragment.home.FragmentBanner"
+            app:layout_constraintTop_toBottomOf="@+id/line_group1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_search"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:orientation="vertical"
+            android:visibility="@{viewModel1.edittextSearch.length() == 0 ? View.GONE : View.VISIBLE}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_group1"/>
+
+        <com.example.appthoitrang.common.HeaderMenu
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setMenuListener="@{viewModel1}"
+            app:layout_constraintTop_toBottomOf="@+id/line_group1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

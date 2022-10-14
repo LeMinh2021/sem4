@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="textStyleTitle">
+        <item name="android:textSize">@dimen/sp25</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="HomeNumber">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">36dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">148dp</item>
+        <item name="android:textColor">@color/color_6bd6ab</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="HomeTask">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">96dp</item>
+        <item name="android:textColor">@color/color_82a3a3</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="StatusName">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/color_145252</item>
+    </style>
+
+    <style name="StatusContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textColor">@color/color_145252</item>
+    </style>
+
+    <style name="StatusLayout">
+        <item name="android:layout_width">@dimen/_120sdp</item>
+        <item name="android:layout_height">@dimen/_120sdp</item>
+        <item name="android:padding">@dimen/_14sdp</item>
+        <item name="android:background">@drawable/bg_home_status</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TextInputStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:drawableStart">@drawable/ic_baseline_person_outline_24</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:textColorHint">#DDDDDA</item>
+        <item name="android:textColor">#232629</item>
+    </style>
+
+    <style name="FieldParent">
+        <item name="android:background">@drawable/bg_field_parent</item>
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:fontFamily">@font/baloo</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:background">@drawable/round_boder</item>
+        <item name="android:drawablePadding">@dimen/_16sdp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/h5E5E5E</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_50sdp</item>
+        <item name="android:layout_marginStart">@dimen/_50sdp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:background">@drawable/background1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="EdittextUpdateProfile">
+        <item name="android:background">@color/hF6F6F6</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="paddingStart">@dimen/_8sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/h5E5E5E</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:paddingLeft">@dimen/_8sdp</item>
+    </style>
+
+    <style name="CardViewProfile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_1sdp</item>
+        <item name="cardElevation">@dimen/_4sdp</item>
+    </style>
+
+    <style name="TextContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/h5E5E5E</item>
+    </style>
+
+    <style name="TextTitleItemAccount">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:textColor">@color/color_0B368E</item>
+        <item name="android:textSize">@dimen/_18sdp</item>
+    </style>
+
+    <style name="TextTitleValueItemAccount">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/baloo</item>
+        <item name="android:textColor">@color/color_004343</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:paddingTop">@dimen/_3sdp</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="singleLine">true</item>
+    </style>
+</resources>

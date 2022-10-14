@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="action"
+            type="com.example.appthoitrang.ui.auth.viewmodel.RegisterViewModel" />
+    </data>
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/headerLogin"
+            layout="@layout/layout_header_account"
+            app:title='@{@string/lbl_register}' />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/viewBottom"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    style="@style/Edittext"
+                    android:text="@={action.userName}"
+                    android:autofillHints="@string/hint_email"
+                    android:drawableStart="@drawable/ic_user_name"
+                    android:hint="@string/hint_user_name"
+                    android:inputType="text"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    style="@style/Edittext"
+                    android:autofillHints="@string/hint_password"
+                    android:text="@={action.email}"
+                    android:drawableStart="@drawable/ic_email"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    style="@style/Edittext"
+                    android:autofillHints="@string/hint_password"
+                    android:text="@={action.password}"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_register"
+                    style="@style/Button"
+                    android:text="@string/lbl_register" />
+
+                <TextView
+                    android:id="@+id/txtForgetPass"
+                    style="@style/TextContent"
+                    android:onClick="@{()->action.backScreen()}"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:text="@string/lbl_you_already_an_account"
+                    android:textColor="@color/h904CAF50" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>
